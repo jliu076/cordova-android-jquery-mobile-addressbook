@@ -388,7 +388,7 @@ ga_storage._setAccount('UA-37167XXX-1'); //Replace with your own
 ga_storage._setDomain('none');
 
 //google analytics using jquery mobile
-$('[data-role=page]').live('pageshow', function (event, ui) {
+$('[data-role=page]').on('pageshow', function (event, ui) {
     console.log('google analytics pageshow')
     try {
         page = location.href.replace(/.*\//,'/')
