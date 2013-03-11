@@ -1,16 +1,6 @@
-window.HomeView = Backbone.View.extend({
+window.AllContactsView = Backbone.View.extend({
 
-	template : _.template($('#home').html()),
-
-	render : function(eventName) {
-		$(this.el).html(this.template());
-		return this;
-	}
-});
-
-window.Page1View = Backbone.View.extend({
-
-	template : _.template($('#page1').html()),
+	template : _.template($('#allContacts').html()),
 
 	render : function(eventName) {
 		$(this.el).html(this.template());
@@ -18,9 +8,19 @@ window.Page1View = Backbone.View.extend({
 	}
 });
 
-window.Page2View = Backbone.View.extend({
+window.NewContactView = Backbone.View.extend({
 
-	template : _.template($('#page2').html()),
+	template : _.template($('#newContact').html()),
+
+	render : function(eventName) {
+		$(this.el).html(this.template());
+		return this;
+	}
+});
+
+window.ShowContactView = Backbone.View.extend({
+
+	template : _.template($('#showContact').html()),
 
 	render : function(eventName) {
 		$(this.el).html(this.template());
@@ -31,9 +31,9 @@ window.Page2View = Backbone.View.extend({
 var AppRouter = Backbone.Router.extend({
 
 	routes : {
-		"" : "home",
-		"page1" : "page1",
-		"page2" : "page2"
+		"" : "allContacts",
+		"newContact" : "newContact",
+		"showContact" : "showContact"
 	},
 
 	initialize : function() {
@@ -45,19 +45,19 @@ var AppRouter = Backbone.Router.extend({
 		this.firstPage = true;
 	},
 
-	home : function() {
-		console.log('#home');
-		this.changePage(new HomeView());
+	allContacts : function() {
+		console.log('#allContacts');
+		this.changePage(new AllContactsView());
 	},
 
-	page1 : function() {
-		console.log('#page1');
-		this.changePage(new Page1View());
+	newContact : function() {
+		console.log('#newContact');
+		this.changePage(new NewContactView());
 	},
 
-	page2 : function() {
-		console.log('#page2');
-		this.changePage(new Page2View());
+	showContact : function() {
+		console.log('#showContact');
+		this.changePage(new ShowContactView());
 	},
 
 	changePage : function(page) {

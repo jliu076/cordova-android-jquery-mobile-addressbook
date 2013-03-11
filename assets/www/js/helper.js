@@ -403,3 +403,20 @@ $('[data-role=page]').on('pageshow', function (event, ui) {
         console.log('error google analytics '+err)
     }
 });
+
+// NOT WORKING!
+// Extend underscore's template() to allow inclusions using <% include %>
+// http://emptysquare.net/blog/adding-an-include-tag-to-underscore-js-templates/
+function template(str, data) {
+    // match "<% include template-id %>"
+    return _.template(
+        str.replace(
+            /<%\s*include\s*(.*?)\s*%>/g,
+            function(match, templateId) {
+                var el = document.getElementById(templateId);
+                return el ? el.innerHTML : '';
+            }
+        ),
+        data
+    );
+}
