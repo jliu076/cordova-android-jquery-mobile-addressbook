@@ -1,0 +1,73 @@
+
+<div id="newContact" data-theme="b" data-role="header"
+	data-position="fixed">
+	<a id="saveBtn" data-role="button" href="#" class="ui-btn-right">
+		Done </a> <a id="cancelBtn" data-role="button" href="#"
+		class="ui-btn-left"> Cancel </a>
+	<h1>New Contact</h1>
+</div>
+<div data-role="content">
+	<form id="contactForm" action="" data-ajax="false">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<div id="profilePicture" style="text-align: center">
+					<img id="profilePicture" style="width: 80%; height: 80%"
+						src="http://assets.codiqa.com/1h6LzUrvSDW05Z3QDRRq_profile.jpg">
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div id="firstName" data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="firstName"> </label> <input name="" id="firstName"
+							placeholder="First" value="" type="text">
+					</fieldset>
+				</div>
+				<div id="lastName" data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="lastName"> </label> <input name="" id="lastName"
+							placeholder="Last" value="" type="text">
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div id="mobile" data-role="fieldcontain">
+		<fieldset data-role="controlgroup">
+			<label for="mobile"> mobile </label> <input name="" id="mobile"
+				placeholder="Phone" value="" type="tel">
+		</fieldset>
+	</div>
+	<div id="emailAddress" data-role="fieldcontain">
+		<fieldset data-role="controlgroup">
+			<label for="emailAddress"> personal </label> <input name=""
+				id="emailAddress" placeholder="E-mail" value="" type="email">
+		</fieldset>
+	</div>
+	<div data-role="fieldcontain">
+		<fieldset data-role="controlgroup">
+			<label for="textinput7"> home page </label> <input name=""
+				id="textinput7" placeholder="URL" value="" type="url">
+		</fieldset>
+	</div>
+	<div id="gender" data-role="fieldcontain">
+		<fieldset data-role="controlgroup" data-type="horizontal">
+			<legend> gender </legend>
+			<input id="radio1" name="" value="M" type="radio"> <label
+				for="radio1"> Male </label> <input id="radio2" name="" value="F"
+				type="radio"> <label for="radio2"> Female </label>
+		</fieldset>
+	</div>
+	<div id="dateOfBirth" data-role="fieldcontain">
+		<fieldset data-role="controlgroup">
+			<label for="dateOfBirth"> date </label> <input name=""
+				id="dateOfBirth" placeholder="Birthday" value="" type="date">
+		</fieldset>
+	</div>
+	<div id="addAddressPanel" data-role="collapsible-set">
+		<div data-role="collapsible">
+			<h3>add address</h3>
+		</div>
+	</div>
+	<a id="deleteBtn" data-role="button" data-theme="b" href="#page2"
+		data-icon="delete" data-iconpos="left"> Delete Contact </a>
+</div>
