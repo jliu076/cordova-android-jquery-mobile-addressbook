@@ -5,7 +5,9 @@
     //Comment out the optimize line if you want
     //the code minified by UglifyJS
     // optimize: "none",
-    optimizeAllPluginResources: true,
+    
+    // optimizeAllPluginResources: true, // such as templates to optimized javascripts
+    
     paths: {
 		jquery: 'empty:', // bundled with requireJS
 		jqueryMobileConfig: 'lib/jquery-mobile/config',
@@ -20,8 +22,8 @@
     modules: [
         //Optimize the application files. jQuery is not 
         //included since it is already in require-jquery.js
-       {
+      /* {
            name: "views/dummy"  //created to build optimized js for html files in templates directory
-       }
+       } */
     ]
 })

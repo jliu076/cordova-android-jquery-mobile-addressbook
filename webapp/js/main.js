@@ -1,6 +1,6 @@
 // Require.js allows us to configure shortcut alias
 require.config({
-  config: {
+/*  config: {
     text: {
       useXhr: function (url, protocol, hostname, port) {
         // allow cross-domain requests
@@ -8,7 +8,7 @@ require.config({
         return protocol == 'file' ? false: true;
       }
     }
-  },	
+  },	*/
 	// The shim config allows us to configure dependencies for
 	// scripts that do not call define() to register a module
 	shim: {

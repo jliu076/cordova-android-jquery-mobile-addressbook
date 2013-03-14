@@ -16,6 +16,6 @@ $(document).on("mobileinit", function() {
 	var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
 
 	if (isAndroid)  {
-		$.mobile.defaultPageTransition = none;
+		$.mobile.defaultPageTransition = 'none';
 	}	
 });	
